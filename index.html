@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff6f91">
+
+<title>For My Lab ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff7fa;
+    color: #4b2632;
+    overflow-x: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #ffe3ec 0%,
+            #fff7fa 55%,
+            #ffffff 100%
+        );
+}
+
+.hero-content {
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+}
+
+.small {
+    font-family: Arial, sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #b94f70;
+}
+
+h1 {
+    font-size: clamp(48px, 12vw, 92px);
+    line-height: 0.95;
+    margin: 18px 0;
+    color: #7d2947;
+}
+
+.subtitle {
+    font-size: clamp(18px, 4vw, 25px);
+    font-style: italic;
+    margin-bottom: 32px;
+}
+
+.open-btn {
+    border: none;
+    border-radius: 999px;
+
+    padding: 16px 30px;
+
+    background: #e95d83;
+    color: white;
+
+    box-shadow: 0 12px 30px #e95d8344;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.open-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px #e95d8355;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 25px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #a87886;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 85px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: none;
+}
+
+.section-label {
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #b94f70;
+
+    margin-bottom: 12px;
+}
+
+h2 {
+    text-align: center;
+
+    font-size: clamp(34px, 8vw, 55px);
+
+    color: #7d2947;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   MAIN PHOTO
+========================= */
+
+.photo-card {
+    max-width: 440px;
+
+    margin: 0 auto 55px;
+
+    background: white;
+
+    padding: 14px 14px 45px;
+
+    box-shadow: 0 20px 50px #8c42521c;
+
+    transform: rotate(-1.5deg);
+}
+
+.main-photo {
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+}
+
+.caption {
+    text-align: center;
+
+    margin-top: 18px;
+
+    font-style: italic;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter {
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px 28px;
+
+    box-shadow: 0 15px 45px #8c42521a;
+
+    font-size: 18px;
+
+    line-height: 1.85;
+}
+
+.letter p {
+    margin-bottom: 20px;
+}
+
+.big-love {
+    text-align: center;
+
+    font-size: 30px;
+
+    color: #d83f6d;
+
+    font-weight: bold;
+
+    margin-top: 28px;
+}
+
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.gallery-card {
+    background: white;
+
+    padding: 10px 10px 28px;
+
+    box-shadow: 0 12px 35px #8c42521c;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.gallery-card:nth-child(1) {
+    transform: rotate(-2deg);
+}
+
+.gallery-card:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.gallery-card:nth-child(3) {
+    transform: rotate(1deg);
+}
+
+.gallery-card:nth-child(4) {
+    transform: rotate(-2deg);
+}
+
+.gallery-card:nth-child(5) {
+    transform: rotate(-1deg);
+}
+
+.gallery-card:nth-child(6) {
+    transform: rotate(2deg);
+}
+
+.gallery-card:nth-child(7) {
+    transform: rotate(-2deg);
+}
+
+.gallery-card:hover {
+    transform: rotate(0deg) translateY(-7px) scale(1.02);
+
+    box-shadow: 0 20px 45px #8c42522b;
+}
+
+.gallery-card img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.gallery-caption {
+    text-align: center;
+
+    margin-top: 14px;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    color: #8d5365;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 75vh;
+    min-height: 75svh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #7d2947;
+
+    color: white;
+
+    max-width: none;
+}
+
+.final h2 {
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.final p {
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.final-love {
+    font-size: clamp(48px, 12vw, 90px);
+
+    margin: 30px 0;
+}
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #7d2947;
+
+    color: #f5cbd7;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+
+    pointer-events: none;
+
+    animation: float 5s linear forwards;
+
+    z-index: 10;
+}
+
+@keyframes float {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(25deg)
+            scale(1.4);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 16px;
+    }
+
+    .letter {
+        padding: 28px 21px;
+
+        font-size: 17px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .gallery-card {
+        padding: 7px 7px 18px;
+    }
+
+    .gallery-caption {
+        font-size: 12px;
+
+        margin-top: 9px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     OPENING
+========================= -->
+
+<header class="hero">
+
+```
+<div class="hero-content">
+
+    <div class="small">
+        A little something for you
+    </div>
+
+    <h1>
+        For My Lab ❤️
+    </h1>
+
+    <div class="subtitle">
+        There's something I want you to know...
+    </div>
+
+    <button
+        class="open-btn"
+        onclick="openSurprise()">
+
+        Open Your Surprise 🎁
+
+    </button>
+
+</div>
+
+<div class="scroll">
+    SCROLL DOWN ↓
+</div>
+```
+
+</header>
+
+<main id="surprise">
+
+<!-- =========================
+     BIRTHDAY
+========================= -->
+
+<section class="reveal">
+
+```
+<div class="section-label">
+    A special day
+</div>
+
+<h2>
+    Happy 22nd Birthday,
+    Mikkaela! 🎂
+</h2>
+
+
+<div class="photo-card">
+
+    <!-- PHOTO 01 -->
+
+    <img
+        src="images/photo01.jpg"
+        alt="Mikkaela"
+        class="main-photo"
+    >
+
+    <div class="caption">
+        My beautiful Lab ❤️
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section class="reveal">
+
+```
+<div class="section-label">
+    From my heart
+</div>
+
+<h2>
+    A letter for you 💌
+</h2>
+
+
+<div class="letter">
+
+    <p>
+        Happy birthday to the girl who means so much to me. 🥹❤️
+    </p>
+
+
+    <p>
+        Lab, I just want you to know how incredibly grateful
+        I am that I get to have you in my life.
+        Through all the laughs, random moments,
+        little arguments, late-night conversations,
+        and everything we've been through together,
+        I wouldn't trade what we have for anything.
+    </p>
+
+
+    <p>
+        You make my days brighter just by being there.
+        You have this way of making ordinary moments feel special,
+        and honestly, having you beside me is one of the things
+        I'm most thankful for.
+    </p>
+
+
+    <p>
+        I may not always know the perfect words to say it,
+        and I may not always show it the way I should,
+        but I hope you always remember this:
+    </p>
+
+
+    <p class="big-love">
+        I LOVE YOU SO, SO MUCH, LAB. ❤️
+    </p>
+
+
+    <p>
+        I love your smile, your little habits, the way you are,
+        and even the things that sometimes drive me crazy. 😂
+        I love the memories we've made, and I'm excited for
+        all the memories we haven't made yet.
+    </p>
+
+
+    <p>
+        Today is your 22nd birthday,
+        and I hope you feel just how loved and appreciated
+        you truly are.
+    </p>
+
+
+    <p>
+        Thank you for being my Lab.
+        Thank you for choosing me,
+        for staying with me,
+        and for being part of my life.
+    </p>
+
+
+    <p>
+        Happy 22nd birthday, Mikkaela. 🎂❤️
+    </p>
+
+
+    <p>
+        I love you more than I can put into words.
+    </p>
+
+
+    <p style="text-align:right;font-style:italic">
+        Always your Lab. ❤️
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO MEMORIES
+========================= -->
+
+<section class="reveal">
+
+```
+<div class="section-label">
+    Our memories
+</div>
+
+<h2>
+    A few moments with you 📸
+</h2>
+
+
+<div class="gallery">
+
+
+    <!-- PHOTO 01 -->
+
+    <div class="gallery-card">
+
+        <img
+            src="images/photo01.jpg"
+            alt="Memory 1"
+        >
+
+        <div class="gallery-caption">
+            One of my favorite memories ❤️
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 02 -->
+
+    <div class="gallery-card">
+
+        <img
+            src="images/photo02.jpg"
+            alt="Memory 2"
+        >
+
+        <div class="gallery-caption">
+            You make me smile ❤️
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 03 -->
+
+    <div class="gallery-card">
+
+        <img
+            src="images/photo03.jpg"
+            alt="Memory 3"
+        >
+
+        <div class="gallery-caption">
+            Another beautiful memory 💕
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 04 -->
+
+    <div class="gallery-card">
+
+        <img
+            src="images/photo04.jpg"
+            alt="Memory 4"
+        >
+
+        <div class="gallery-caption">
+            Just you being you 🥰
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 05 -->
+
+    <div class="gallery-card">
+
+        <img
+            src="images/photo05.jpg"
+            alt="Memory 5"
+        >
+
+        <div class="gallery-caption">
+            Forever one of my favorites 💗
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 06 -->
+
+    <div class="gallery-card">
+
+        <img
+            src="images/photo06.jpg"
+            alt="Memory 6"
+        >
+
+        <div class="gallery-caption">
+            More memories with my Lab ❤️
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 07 -->
+
+    <div class="gallery-card">
+
+        <img
+            src="images/photo07.jpg"
+            alt="Memory 7"
+        >
+
+        <div class="gallery-caption">
+            And many more to come... ♾️
+        </div>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     FINAL MESSAGE
+========================= -->
+
+<section class="final">
+
+```
+<div class="reveal">
+
+    <div
+        class="section-label"
+        style="color:#f4a9bf">
+
+        One last thing...
+
+    </div>
+
+
+    <h2>
+        My Lab, ❤️
+    </h2>
+
+
+    <div class="final-love">
+        ∞ ❤️ ∞
+    </div>
+
+
+    <p>
+        No matter how many birthdays come and go,
+        I hope I'm still here celebrating them with you.
+    </p>
+
+
+    <p style="margin-top:25px">
+
+        Here's to you, to us,
+        and to all the memories we still have
+        waiting for us.
+
+    </p>
+
+
+    <p
+        style="
+            margin-top:30px;
+            font-size:25px;
+        ">
+
+        I love you. Always. ❤️
+
+    </p>
+
+</div>
+```
+
+</section>
+
+</main>
+
+<footer>
+    Made with love, just for Mikkaela ❤️
+</footer>
+
+<script>
+
+/* =========================
+   OPEN SURPRISE
+========================= */
+
+function openSurprise() {
+
+    document
+        .getElementById("surprise")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+
+    /* Create lots of hearts */
+
+    for (let i = 0; i < 25; i++) {
+
+        setTimeout(
+            createHeart,
+            i * 100
+        );
+
+    }
+
+}
+
+
+/* =========================
+   HEART CREATOR
+========================= */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className = "heart";
+
+
+    heart.textContent =
+        [
+            "❤️",
+            "💕",
+            "💗",
+            "💖",
+            "💓",
+            "♡"
+        ][
+            Math.floor(
+                Math.random() * 6
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+
+    heart.style.bottom =
+        "-30px";
+
+
+    heart.style.fontSize =
+        16 +
+        Math.random() * 22 +
+        "px";
+
+
+    heart.style.animationDuration =
+        4 +
+        Math.random() * 3 +
+        "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => heart.remove(),
+        7000
+    );
+
+}
+
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target.classList.add(
+                        "show"
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff5f7);
+    color: #4a2630;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.small-text {
+    color: #b65b72;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 80px);
+    color: #a83f5d;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+button {
+    border: none;
+    background: #c94f70;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(201, 79, 112, 0.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #a83f5d;
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#surprise p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+h2 {
+    color: #a83f5d;
+    margin: 40px 0 25px;
+    font-size: 32px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.photos img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.reasons {
+    background: rgba(255,255,255,0.6);
+    padding: 35px;
+    border-radius: 25px;
+    margin-top: 60px;
+}
+
+.reasons ol {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.final-message {
+    padding: 70px 20px;
+}
+
+.final-message h2 {
+    font-size: 38px;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .photos img {
+        height: 250px;
+    }
+}
